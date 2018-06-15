@@ -1,9 +1,9 @@
 {
   "name": "Sprint-Challenge-Authentication",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "repository": "https://github.com/danteocualesjr/Sprint-Challenge-Authentication.git",
