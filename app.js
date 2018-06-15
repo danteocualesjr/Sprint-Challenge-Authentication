@@ -10,3 +10,5 @@ mongoose.connect('mongodb://localhost/auth-users', {
 server.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
+
+// pseudo code here
