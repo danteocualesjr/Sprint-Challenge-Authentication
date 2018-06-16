@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const port = process.env.PORT || 5000;
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/auth-users', {
+mongoose.connect('mongodb://localhost/Sprint-Challenge-Authentication', {
   useMongoClient: true
 });
 
