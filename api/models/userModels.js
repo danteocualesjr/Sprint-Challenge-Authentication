@@ -27,6 +27,7 @@ function checkPassword(password) {
   return password.length > 8;
 }
 
+// This is a middleware.
 UserSchema.pre('save', function(next) {
   // https://github.com/kelektiv/node.bcrypt.js#usage
   // Fill this middleware in with the Proper password encrypting, bcrypt.hash()
