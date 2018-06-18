@@ -50,10 +50,18 @@ UserSchema.methods.checkPassword = function(plainTextPW, callBack) {
   // Fill this method in with the Proper password comparing, bcrypt.compare()
   // Your controller will be responsible for sending the information here for password comparison
   // Once you have the user, you'll need to pass the encrypted pw and the plaintext pw to the compare function
-  bcrypt.compare(plainTextPW, this.password, function(err, matched) {
-    if (err) return callback(err)
-    else return callback(null, matched)
-  })
+  bcrypt.compare(plainTextPW, this.password)
+    .then(isValid => {
+      console.log("isValid:", isValid);
+      isValid ?
+        callBack(null, isValid)
+      :
+        callBack('thisCbIsCool', null);
+    })
+    .catch(err => {
+      console.log("UserSchema method 'checkPassword' ERROR:", err);
+      callBack(true, null);
+    })
 };
 
 module.exports = mongoose.model('User', UserSchema);
